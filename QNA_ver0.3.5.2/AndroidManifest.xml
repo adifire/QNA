@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="qna.app"
+      android:versionCode="1"
+      android:versionName="0.4">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+        
+        <activity android:name=".qnaActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".qnaPreferences" android:screenOrientation="portrait"/>
+        
+        <activity android:name=".qnaAlarmHandle" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        
+        <receiver android:name=".qnaAlarmReciever" />
+        
+        <receiver android:name=".qnaWidget">
+        	<intent-filter >
+        		<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        		<action android:name="clock.series.AppWidget.plus"/>
+        		<action android:name="clock.series.AppWidget.minus"/>
+        	</intent-filter>
+        	<meta-data android:name="android.appwidget.provider"
+        			   android:resource="@xml/qna_widget_info"/>
+        </receiver>
+
+    </application>
+</manifest>

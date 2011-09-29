@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  <RelativeLayout android:id="@+id/w_layer_1"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:paddingBottom="5px">
+    <Button android:id="@+id/w_minus_b"
+    	android:layout_width="40dp" 
+	    android:layout_height="40dp" 
+	    android:background="@drawable/minus_1"
+	    android:soundEffectsEnabled="true"/>
+	<TextView android:id="@+id/w_min_text"
+		android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:text="00:00"
+	    android:textSize="30dp"
+	    android:layout_toRightOf="@id/w_minus_b"/>
+	<Button android:id="@+id/w_plus_b"
+    	android:layout_width="40dp" 
+	    android:layout_height="40dp" 
+	    android:background="@drawable/plus_1"
+	    android:soundEffectsEnabled="true"
+	    android:layout_toRightOf="@id/w_min_text"/>
+   </RelativeLayout> 
+	<Button android:id="@+id/w_buzz_b"
+    	android:layout_width="130dp" 
+	    android:layout_height="50dp" 
+	    android:text="@string/buzz_string"
+	    android:textSize="20dp"
+	    android:background="@drawable/button_1"
+	    android:soundEffectsEnabled="true"
+	    android:layout_below="@id/w_layer_1"/>
+</RelativeLayout>

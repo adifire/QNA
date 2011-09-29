@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<DigitalClock android:id="@+id/qna_clock"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:paddingTop="40dp"
+			android:textSize="50dp"
+			android:typeface="sans" />
+	
+	<ViewFlipper android:id="@+id/qna_flipper"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/qna_clock"
+			android:paddingTop="20dp"
+			android:inAnimation="@anim/push_left_in"
+			android:outAnimation="@anim/push_left_out"
+			android:flipInterval="1000">
+			
+			<RelativeLayout android:id="@+id/qna_beforeflip_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:gravity="center"
+					android:layoutAnimation="@anim/layout_random_fade">
+					
+					<LinearLayout android:id="@+id/qna_time_set_layout"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:orientation="vertical"
+							android:paddingBottom="20dp">
+							
+							<Button android:id="@+id/qna_main_plus_button"
+									android:layout_width="60dp"
+									android:layout_height="60dp"
+									android:background="@drawable/plus_1"/>
+							
+							<TextView android:layout_width="fill_parent"
+									android:layout_height="0dp"/>
+							
+							<TextView android:id="@+id/qna_main_time_text"
+									android:layout_width="wrap_content"	
+									android:layout_height="wrap_content"
+									android:textSize="60dp"
+									android:text="00:00" />
+							
+							<TextView android:layout_width="fill_parent"
+									android:layout_height="0dp"/>
+							
+							<Button android:id="@+id/qna_main_minus_button"
+									android:layout_width="60dp"
+									android:layout_height="60dp"
+									android:background="@drawable/minus_1"/>						
+					</LinearLayout>
+					
+					<Button android:id="@+id/qna_main_buzz_button"
+							android:layout_width="120dp"
+							android:layout_height="wrap_content"
+							android:layout_centerHorizontal="true"
+							android:layout_below="@id/qna_time_set_layout"
+							android:text="@string/buzz_string"
+							android:textStyle="bold"
+							android:textColor="#FFFFFF"
+							android:textSize="30dp"
+							android:hapticFeedbackEnabled="true"
+						    android:soundEffectsEnabled="true"
+	  						android:background="@drawable/button_1"/>
+					
+			</RelativeLayout>
+			
+			<LinearLayout android:id="@+id/qna_afterflip_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:gravity="center"
+					android:paddingTop="30dp">
+					
+					<TextView android:id="@+id/qna_main_countdown_text"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="00:00:00"
+							android:textSize="60dp"
+							android:textStyle="bold"/>
+					
+					<Button android:id="@+id/qna_main_cancel_button"
+							android:layout_width="120dp"
+							android:layout_height="wrap_content"
+							android:text="@string/cancel_string"
+							android:textSize="30dp"
+							android:textColor="#FFFFFF"
+							android:hapticFeedbackEnabled="true"
+						    android:soundEffectsEnabled="true"
+						    android:background="@drawable/button_1"/>		
+			</LinearLayout>
+	
+	</ViewFlipper>
+</RelativeLayout>

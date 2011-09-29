@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" 
+  android:orientation="vertical">
+  	
+  	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Preferences"
+		android:textSize="40dp"/>
+	<TextView android:background="#6D7B95"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"/>
+	
+	<ViewFlipper android:id="@+id/p_flipper_interval"
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:paddingTop="15dp"
+		android:inAnimation="@anim/push_left_in"
+		android:outAnimation="@anim/push_left_out"
+		android:flipInterval="1000">
+		    <LinearLayout android:id="@+id/alarm_settings_1"
+		    	  android:layout_width="fill_parent"
+		    	  android:layout_height="fill_parent"
+		    	  android:orientation="vertical">
+    			<LinearLayout 
+    			  android:layout_width="fill_parent"
+    			  android:layout_height="wrap_content"
+    			  android:paddingBottom="10dp"
+    			  android:orientation="horizontal">
+    					
+    					<LinearLayout 
+	    					android:layout_width="wrap_content"
+	    					android:layout_height="wrap_content"
+	    					android:orientation="vertical"
+	    					android:paddingRight="5dp">
+					<TextView 
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="Interval Settings"
+							android:textSize="27dp"/>
+					<TextView android:id="@+id/qna_pref_interval_text"
+							android:layout_height="wrap_content"
+							android:layout_width="200dp"
+							android:text="Current value is "
+							/>
+				     </LinearLayout>
+				    
+				    <Button android:id="@+id/p_flip_on"
+				    			android:layout_width="fill_parent"
+				    			android:layout_height="50dp"
+				    			android:paddingTop="5dp"
+				    			android:text="@string/pref_change_string"
+				    			android:textSize="20dp"/> 
+				     
+			</LinearLayout>
+			
+			</LinearLayout>
+			
+			<LinearLayout android:id="@+id/alarm_setting_2"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:orientation="vertical">
+			<LinearLayout 
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:orientation="horizontal">  
+					
+					<Button android:id="@+id/p_flip_off"
+				    			android:layout_width="100dp"
+				    			android:layout_height="50dp"
+				    			android:paddingTop="5dp"
+				    			android:text="back"
+				    			android:textSize="20dp"/> 
+					
+					<LinearLayout 
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:orientation="horizontal">
+							
+							<EditText android:id="@+id/p_interval_edit"
+							  android:layout_width="100dp"
+							  android:layout_height="wrap_content"
+							  android:textSize="20dp"
+							  android:inputType="number"/>
+							
+							<Button android:id="@+id/p_interval_button_submit"
+							  android:layout_width="fill_parent"
+							  android:layout_height="50dp"
+							  android:text="@string/change_string"
+							  android:textSize="20dp"/>
+							
+					</LinearLayout>
+			</LinearLayout>
+			
+			</LinearLayout>
+    
+    </ViewFlipper>
+    <TextView android:background="#6D7B95"
+	  android:layout_width="fill_parent"
+	  android:layout_height="1dp"/>
+    
+    <LinearLayout android:id="@+id/rt_settings"
+		    			android:layout_width="fill_parent"
+		    			android:layout_height="100dp"
+		    			android:paddingTop="15dp"
+		    			android:orientation="vertical">
+    			<LinearLayout 
+    					android:layout_width="fill_parent"
+    					android:layout_height="wrap_content"
+    					android:paddingBottom="10dp"
+    					android:orientation="horizontal">
+    					
+    					<LinearLayout 
+	    					android:layout_width="wrap_content"
+	    					android:layout_height="wrap_content"
+	    					android:orientation="vertical"
+	    					android:paddingRight="5dp">
+					<TextView 
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="Alarm Tone"
+							android:textSize="27dp"/>
+					<TextView android:id="@+id/qna_pref_rt_text"
+							android:layout_height="wrap_content"
+							android:layout_width="200dp"
+							android:text="Current tone is "
+							/>
+				     </LinearLayout>
+				    
+				    <Button android:id="@+id/qna_pref_change_rt_button"
+				    			android:layout_width="fill_parent"
+				    			android:layout_height="50dp"
+				    			android:paddingTop="5dp"
+				    			android:text="@string/pref_change_string"
+				    			android:textSize="20dp"/> 
+				     
+			</LinearLayout>
+			
+	</LinearLayout>
+    <TextView android:background="#6D7B95"
+					android:layout_width="fill_parent"
+					android:layout_height="1dp"/>
+    <LinearLayout 
+    			android:layout_width="fill_parent"
+    			android:layout_height="fill_parent"></LinearLayout>
+</LinearLayout>

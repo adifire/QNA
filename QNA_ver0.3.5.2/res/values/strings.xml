@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quick Nap App</string>
+    <string name="buzz_string">BUZZ!</string>
+    <string name="cancel_string">CANCEL</string>
+    <string name="preferences_string">Preferences</string>
+    <string name="about_string">About</string>
+    <string name="pref_change_string">Change</string>
+    <string name="wake_string">WAKE UP!</string>
+    <string name="change_string">Change</string>
+</resources>
